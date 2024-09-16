@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  const [weatherData, setWeatherData] = useState({ready: false});
+  const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response.data);
@@ -18,9 +18,9 @@ export default function Weather() {
       iconUrl: response.data.condition.icon_url,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
-      ready: true
+      ready: true,
     });
-
+   
   }
 
   if (weatherData.ready) {
