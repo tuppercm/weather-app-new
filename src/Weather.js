@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
@@ -20,7 +20,6 @@ export default function Weather() {
       wind: response.data.wind.speed,
       ready: true,
     });
-   
   }
 
   if (weatherData.ready) {
@@ -70,8 +69,7 @@ export default function Weather() {
     );
   } else {
     const apiKey = "bb1ff32oa1215694c28tecb0d1659beb";
-    let city = "Lisbon";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
