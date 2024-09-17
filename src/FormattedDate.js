@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function FormattedWeather(props) {
-
   let months = [
     "January",
     "February",
@@ -14,7 +13,7 @@ export default function FormattedWeather(props) {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   let days = [
@@ -31,18 +30,27 @@ export default function FormattedWeather(props) {
   let day = days[props.date.getDay()];
   let date = props.date.getDate();
   let hours = props.date.getHours();
-    if (hours < 10) {
-      hours = `0${hours}`;
-    }
+  let amPm = "";
+  if (hours < 12) {
+    amPm = "AM";
+  } else {
+    amPm = "PM";
+  }
+  if (hours > 0 && hours < 10) {
+    hours = `0${hours}`;
+  }
+  if (hours > 12) {
+    hours = `${hours - 12}`;
+  }
+
   let minutes = props.date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
-
   return (
     <div>
-      {day} {month} {date} {hours}:{minutes}
+      {day} {month} {date} {hours}:{minutes} {amPm}
     </div>
   );
 }
