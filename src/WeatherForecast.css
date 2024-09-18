@@ -1,0 +1,17 @@
+.WeatherForecast {
+    text-align: center;
+}
+
+.WeatherForecast .forecast-day {
+
+}
+
+.WeatherForecast .forecast-temperature {
+}
+
+.WeatherForecast .forecast-high {
+    font-weight: bold;
+}
+
+.WeatherForecast .forecast-low {
+}
