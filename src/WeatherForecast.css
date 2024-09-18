@@ -1,17 +1,23 @@
 .WeatherForecast {
-    text-align: center;
+  border: 1px solid #757575;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .WeatherForecast .forecast-day {
-
-}
-
-.WeatherForecast .forecast-temperature {
 }
 
 .WeatherForecast .forecast-high {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .WeatherForecast .forecast-low {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.WeatherForecast .forecast-icon {
+}
+
+.WeatherForecast .forecast-temperature {
 }
