@@ -16,10 +16,10 @@ export default function WeatherForecastDay(props) {
     let day = date.getDay();
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    if (props.index == 0) {
+    if (props.index === 0) {
       return "Today";
     }
-    if (props.index == 1) {
+    if (props.index === 1) {
       return "Tomorrow";
     } else {
       return days[day];
