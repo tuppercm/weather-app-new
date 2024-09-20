@@ -17,6 +17,10 @@
 }
 
 .WeatherForecast .forecast-icon {
+  float: none;
+  height: 50px;
+  width: 50x;
+  margin: 5px;
 }
 
 .WeatherForecast .forecast-temperature {

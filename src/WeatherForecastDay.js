@@ -6,18 +6,19 @@ export default function WeatherForecastDay(props) {
     return `${temperature}°`;
   }
 
-    function minTemperature() {
-      let temperature = Math.round(props.data.temperature.minimum);
-      return `${temperature}°`;
-    }
+  function minTemperature() {
+    let temperature = Math.round(props.data.temperature.minimum);
+    return `${temperature}°`;
+  }
 
   return (
     <div>
       <div className="forecast-day">{props.data.time}</div>
-      <div className="forecast-icon">
+      <div>
         <img
           src={props.data.condition.icon_url}
           alt={props.data.condition.icon}
+          className="forecast-icon"
         />
       </div>
       <div className="forecast-temperature">
