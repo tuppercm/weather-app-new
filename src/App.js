@@ -9,7 +9,7 @@ function App() {
           <Weather defaultCity="New York" />
         </header>
         <footer>
-          Coded in 2024 by Caitlin Tupper, open-sourced on{" "}
+          Coded by Caitlin Tupper. Open-sourced on{" "}
           <a
             href="https://github.com/tuppercm/weather-app-new"
             target="_blank"
