@@ -11,9 +11,7 @@ export default function WeatherForecast(props) {
     setReady(false);
   }, [props.city]);
 
-
   function handleResponse(response) {
-    console.log(response.data.daily);
     setForecast(response.data.daily);
     setReady(true);
   }
@@ -26,7 +24,7 @@ export default function WeatherForecast(props) {
             if (index < 5) {
               return (
                 <div className="col" key={index}>
-                  <WeatherForecastDay data={dailyForecast} index={index}/>
+                  <WeatherForecastDay data={dailyForecast} index={index} />
                 </div>
               );
             } else {
