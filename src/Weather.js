@@ -9,18 +9,23 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    setWeatherData({
-      city: response.data.city,
-      date: new Date(response.data.time * 1000),
-      description: response.data.condition.description,
-      feelsLike: response.data.temperature.feels_like,
-      humidity: response.data.temperature.humidity,
-      icon: response.data.condition.icon,
-      iconUrl: response.data.condition.icon_url,
-      temperature: response.data.temperature.current,
-      wind: response.data.wind.speed,
-      ready: true,
-    });
+    try {
+      setWeatherData({
+        city: response.data.city,
+        date: new Date(response.data.time * 1000),
+        description: response.data.condition.description,
+        feelsLike: response.data.temperature.feels_like,
+        humidity: response.data.temperature.humidity,
+        icon: response.data.condition.icon,
+        iconUrl: response.data.condition.icon_url,
+        temperature: response.data.temperature.current,
+        wind: response.data.wind.speed,
+        ready: true,
+      });
+    } catch (e) {
+      alert("That city was not found. Please try again.");
+    }
+    
   }
 
   function search() {
@@ -56,7 +61,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn btn-success w-100"
               />
             </div>
           </div>
