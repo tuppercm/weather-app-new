@@ -16,18 +16,8 @@ export default function FormattedWeather(props) {
     "December",
   ];
 
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
 
   let month = months[props.date.getMonth()];
-  let day = days[props.date.getDay()];
   let date = props.date.getDate();
   let hours = props.date.getHours();
   let amPm = "";
@@ -50,7 +40,7 @@ export default function FormattedWeather(props) {
 
   return (
     <div>
-      {day} {month} {date} {hours}:{minutes} {amPm}
+      {month} {date} {hours}:{minutes} {amPm}
     </div>
   );
 }
