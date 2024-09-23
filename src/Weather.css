@@ -12,7 +12,7 @@
 
 .Weather h1 {
   font-family: "Acme", sans-serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400px;
   line-height: 29px;
   margin: 20px 0 0 0;
@@ -43,6 +43,10 @@
   width: 68px;
   margin-right: 5px;
   float: left;
+}
+
+.Weather .country {
+  font-family: "Acme", sans-serif;
 }
 
 .Weather .temperature {
