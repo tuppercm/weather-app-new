@@ -27,16 +27,14 @@ function App() {
           </a>
           .
           <br />
-          <p>
-            Photo by{" "}
-            <a href="https://unsplash.com/@mischievous_penguins?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-              Casey Horner
-            </a>{" "}
-            on{" "}
-            <a href="https://unsplash.com/photos/low-angle-photography-of-trees-at-daytime-4rDCa5hBlCs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-              Unsplash
-            </a>
-          </p>
+          Photo by{" "}
+          <a href="https://unsplash.com/@mischievous_penguins?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+            Casey Horner
+          </a>{" "}
+          on{" "}
+          <a href="https://unsplash.com/photos/low-angle-photography-of-trees-at-daytime-4rDCa5hBlCs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+            Unsplash
+          </a>
         </footer>
       </div>
     </div>
