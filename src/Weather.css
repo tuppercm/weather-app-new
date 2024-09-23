@@ -10,10 +10,6 @@
   padding: 20px;
 }
 
-.Weather a {
-  text-decoration: none;
-}
-
 .Weather h1 {
   font-size: 24px;
   font-weight: 100px;
@@ -48,7 +44,6 @@
 }
 
 .Weather .unit {
-  color: rgb(33, 33, 33);
   font-size: 16px;
   font-weight: 400;
   margin-left: 3px;
