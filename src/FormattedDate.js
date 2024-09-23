@@ -1,6 +1,10 @@
 import React from "react";
 
 export default function FormattedWeather(props) {
+  /* Returns date as the full month name, day of month, and time in AM/PM format
+     Example: September 23 2:46 PM
+  */
+
   let months = [
     "January",
     "February",
@@ -15,7 +19,6 @@ export default function FormattedWeather(props) {
     "November",
     "December",
   ];
-
 
   let month = months[props.date.getMonth()];
   let date = props.date.getDate();

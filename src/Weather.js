@@ -5,10 +5,14 @@ import WeatherInfo from "./WeatherInfo";
 import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
+  // Gets and returns weather data for a location from App.js or user-entry
+
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    // Trys to set the useState for WeatherData and alerts user if unable to do so
+
     try {
       setWeatherData({
         city: response.data.city,
@@ -26,21 +30,23 @@ export default function Weather(props) {
     } catch (e) {
       alert("That city was not found. Please try again.");
     }
-    
   }
 
   function search() {
+    // Calls the SheCodes Weather API for given city
     const apiKey = "bb1ff32oa1215694c28tecb0d1659beb";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
+    // Searches for city when user clicks Search button
     event.preventDefault();
     search();
   }
 
   function handleCityChange(event) {
+    // Updates the city value as user enters form
     setCity(event.target.value);
   }
 
